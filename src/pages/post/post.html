@@ -22,7 +22,7 @@
 <ion-content padding>
 
  
-   <div *ngFor="let post of PostList;|async let i = index">
+   <div *ngFor="let post of PostList; let i = index">
     <ion-item (click)="onItemClick(post)">
       <p> {{post.postText}}</p>
       
@@ -31,8 +31,8 @@
       name="thumbs-up" 
       (click)="onClick()"
       likeState="false"
-      [style.color]="likeState" ? 'blue' : 'black' 
-      padding>
+      padding
+      [style.color]="likeState ? 'blue' : 'black'">
     </ion-icon>
       <button ion-button round small></button>
     </div>

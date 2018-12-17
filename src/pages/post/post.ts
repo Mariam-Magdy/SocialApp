@@ -19,15 +19,15 @@ import{AngularFireDatabase, FirebaseListObservable}from'angularfire2/database';
 export class PostPage {
  PostsRef:FirebaseListObservable<Post[]>
  PostList:Post[];
- 
+ counter: number = 0;
+ likeState: boolean = false;
  
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private ActionSheetCtrl:ActionSheetController,
     private database :AngularFireDatabase,
-    public counter = 0,
-    public likeState = false) {
+    ) {
  
     this.PostsRef=this.database.list('Posts');
     this.PostsRef.subscribe(( Itmes)=>{
