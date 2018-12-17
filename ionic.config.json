@@ -1,0 +1,8 @@
+{
+  "name": "Fsocial",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "8d409edb"
+}
